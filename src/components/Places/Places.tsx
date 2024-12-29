@@ -4,8 +4,8 @@ import BottomSheet, { BottomSheetFlatList } from "@gorhom/bottom-sheet";
 import { styles } from "./styles";
 import { Place } from "../Place/Place";
 import { api } from "@/services/api";
-import { MarketsProps } from "@/app/home";
 import { router } from "expo-router";
+import { MarketsProps } from "@/types/types";
 
 type PlacesProps = {
   category: string;

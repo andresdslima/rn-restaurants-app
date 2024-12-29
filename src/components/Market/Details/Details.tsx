@@ -2,24 +2,13 @@ import { View, Text } from "react-native";
 import { IconPhone, IconMapPin, IconTicket } from "@tabler/icons-react-native";
 import { Info } from "@/components/Market/Info/Info";
 import { styles } from "./styles";
+import { PropsDetails } from "@/types/types";
 
-export type PropsDetails = {
-  name: string;
-  description: string;
-  address: string;
-  phone: string;
-  coupons: number;
-  rules: {
-    id: string;
-    description: string;
-  }[];
-};
-
-type Props = {
+type DetailsProps = {
   data: PropsDetails;
 };
 
-export function Details({ data }: Props) {
+export function Details({ data }: DetailsProps) {
   return (
     <View style={styles.container}>
       <Text style={styles.name}>{data.name}</Text>

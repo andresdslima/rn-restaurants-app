@@ -1,13 +1,8 @@
-import { Text, Pressable, PressableProps } from "react-native";
+import { Text, Pressable } from "react-native";
 import { styles } from "./styles";
 import { colors } from "@/styles/theme";
 import { categoriesIcons } from "@/utils/categories-icons";
-
-export type CategoryProps = PressableProps & {
-  name: string;
-  id: string;
-  isSelected?: boolean;
-};
+import { CategoryProps } from "@/types/types";
 
 export function Category({
   name,

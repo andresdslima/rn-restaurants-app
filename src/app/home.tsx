@@ -1,23 +1,18 @@
 import { useEffect, useState } from "react";
 import { Alert, Text, View } from "react-native";
-import { Places } from "@/components/Places/Places";
+import { Places } from "../components/Places/Places";
 import { Categories } from "@/components/Categories/Categories";
 import MapView, { Callout, Marker } from "react-native-maps";
 import * as Location from "expo-location";
-import { PlaceProps } from "@/components/Place/Place";
 import { globalStyles } from "./global";
 import { router } from "expo-router";
 import { currentLocationMock } from "@/data/data";
+import { MarketsProps } from "@/types/types";
 
 interface LocationProps {
   latitude: number;
   longitude: number;
 }
-
-export type MarketsProps = PlaceProps & {
-  latitude: number;
-  longitude: number;
-};
 
 export default function HomePage() {
   const [category, setCategory] = useState("");
